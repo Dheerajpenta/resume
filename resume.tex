@@ -1,0 +1,365 @@
+%-------------------------
+% Resume in Latex
+% Author : Dheeraj Penta, dheerajpenta4@gmail.com
+% License : Apache
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.6cm, top=0.5cm, right=0.6cm, bottom=0.5cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\textbf{:}\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+
+% ------ Main Heading ----------%
+\newcommand{\name}{Dheeraj Penta} % Your Name
+\newcommand{\course}{Software Developer Engineer} % Your Course
+\newcommand{\roll}{2018CHB1053} % Your Roll No.
+\newcommand{\phone}{6303999138} % Your Phone Number
+\newcommand{\emaila}{dheerajpenta4@gmail.com} %Email 1
+\newcommand{\emailb}{2018chb1053@iitrpr.ac.in} %Email 2
+\newcommand{\github}{Dheerajpenta} %Github
+\newcommand{\website}{link to your portfolio if any} %Website
+\newcommand{\linkedin}{dheeraj-penta} %linkedin
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.5cm}{%
+
+\includegraphics[width=2.3cm,clip]{dheeraj.png}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  
+  \course &  \href{mailto:\emaila}{\emaila}\\
+   {JungleWorks Pvt,Ltd.} &  \href{https://github.com/\github}{GitHub}\\
+  {} & \href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin}
+\end{tabularx}
+}
+\vspace{-4mm}
+
+%-----------EDUCATION-----------------
+\section{\textbf{Education}}
+\setlength{\tabcolsep}{5pt}
+\small{\begin{tabularx}
+{\dimexpr\textwidth-2mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  Bachelor of Technology & Indian Institute of Technology, Ropar & 3.28/4 & 2018-2022\\
+  \hline
+  High School & Telangana State Board of Intermediate Education & 94.6\% & 2015-2017 \\
+  \hline
+\end{tabularx}}
+\vspace{-3mm}
+
+%-----------RESEARCH INTRESTS-----------------
+\section{\textbf{Research Intrests}}
+\resumeSubHeadingListStart
+  \item {Machine Learning, Natural Language Processing, Distributed Computing,  Automation of Process, Data Storage techniques.}
+\resumeSubHeadingListEnd
+\vspace{-9mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {JungleWorks Pvt.Ltd}
+    {Chandigarh}
+    {\textbf{Software Developer Engineer}}
+    {Jun 2022 - Present}
+    \resumeItemListStart
+      \item {Managed and maintained the Auth MicroServer, serving as a crucial connector for four products within the company.}
+      \item {Oversaw the upkeep of the Billing MicroService within the Tookan product.}
+      \item {Dockerized all Tookan product microservices, implementing multi-stage building techniques to reduce Docker image size from \textbf{1.5GB to 400MB}, optimising resource usage.}
+      \item {Submitted a total of \textbf{129 Merge Requests}, contributing new major features and bug fixes to both backend and frontend codebases.}
+      \item {Successfully archived MySQL and MongoDb Servers.Reducing the data footprint by \textbf{75\%} The optimization led to substantial cost savings of \textbf{\$5600}.}
+      \item {Designed many automated scripts which migrates and archives data on monthly basis}
+      \item {Implemented frequent server-side optimizations, including code updates and solving more than \textbf{50+} complex SQL query optimizations, enhancing product performance. }
+      \item {Enhanced the scheduler and socket microservices, reducing memory utilisation from \textbf{2.5GB to approximately 1GB}, while enabling scheduling and real-time data delivery to clients.}
+      \item {Designed and coded new billing plans for product extensions within Tookan.}
+      \item {Resolved reported issues within the product and delegated tasks to software developer interns.}
+    \resumeItemListEnd
+  \resumeSubheading
+    {CodeUnity Technologies Pvt.Ltd}
+    {Hyderabad}
+    {\textbf{Software Developer Intern}}
+    {May 2021 - July 2021}
+    \resumeItemListStart
+      \item {Collaborated on the development of a web application using RESTful API’s  that enables users to create and take quizzes online while providing comprehensive assessments tracking capabilities.}
+      \item {Designed and implemented a robust authorization and authentication system, supporting multiple user roles including admin, manager, and candidates.}
+      \item {Developed a prototype using Firebase (Google) for authentication and authorization as an alternative solution for future consideration.}
+      \item {Enhanced functionality with a bulk upload feature, allowing admin or authorised managers to effortlessly upload questions and assessments via CSV/Excel sheets. Also implemented error-checking mechanisms within the CSV upload process.}
+      \item {Contributed to the creation of an invoicing system, enabling CodeUnity to generate invoices for their clients.}
+      \item {The Invoicing system was designed to be dynamic and flexible, allowing for potential monetization by offering invoicing services to other companies.}
+      \item {\textbf{Technologies Used :} JavaScript, RESTful API’s, MYSQL, MongoDb, HTML, CSS, Node.js, Express.js, Angular.js, FireBase, GIT, GITHUB, VisualStudio Code.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-9mm}
+
+%-----------Volunteering Experience-----------------
+\section{\textbf{Volunteering Experience}}
+\resumeHeadingSkillStart
+  \resumeSubItem
+    {Telugu Cultural Association}
+    {Established the Telugu Cultural Association at the Indian Institute of Technology, Ropar as a core member of  team, collaborating with faculty, with a mission to unite Telugu-speaking students, currently resulting in a memebers exceeding 600 students, successful designed organizational structure, securing over 60,000 Rupees in funding, and orchestrating events like Ugadi with participation from 200+ students and faculty members.}
+\resumeHeadingSkillEnd
+\vspace{-2mm}
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+    \resumeProject
+      {Scheduler MicroService} %Project Name
+      {\textbf{Self, JungleWorks}} %Project Name, Location Name
+      {Apr 2023 - May 2023} %Event Dates
+      {} %Website
+      \resumeItemListStart
+        \item {single handedly redeveloped the Tookan Product's Scheduler MicroService which helps to schedule and re-schedule the tasks of Tookan Product.}
+        \item {introduced new features, restructured and optimised existing code making code more debugging friendly, and eliminating redundancy, which resulted in significant reduction in memory utilisation from \textbf{2.5GB to 1GB}, improving system performance.}
+        \item {Successfully resolved over \textbf{200 npm vulnerabilities} in the existing codebase, achieving a secure and stable application with zero vulnerabilities.}
+        \item {Managed and executed updates for \textbf{MongoDB MicroService} which only connects Scheduler MicroService and server \textbf{operating systems} to the \textbf{latest versions}, ensuring system stability and security.}
+        \item {\textbf{Technologies Used :} JavaScript, Node.js, Express.js, RESTful API Development, Shell Scripting, MongoDB, NPM, Amazon Web Services}
+      \resumeItemListEnd
+    \vspace{-1mm}
+    \resumeProject
+      {WebSocket MicroService} %Project Name
+      {\textbf{Self, JungleWorks}} %Project Name, Location Name
+      {Jan 2023 - Feb 2023} %Event Dates
+      {} %Website
+      \resumeItemListStart
+        \item {single handedly redeveloped the Tookan Product's WebSocket MicroService, enhancing real-time data delivery to clients and introducing innovative features.Added \textbf{5+} new features, which \textbf{reduced CPU utilisation} on Tookan's main servers by \textbf{20\%}}
+        \item {introduced new features, restructured and optimised existing code making code more debugging friendly, and eliminating redundancy, which resulted in significant reduction in memory utilisation from \textbf{1.9GB to 900MB}, improving system performance.}
+        \item {Successfully addressed over \textbf{150 npm vulnerabilities} in the existing codebase, achieving a secure application with zero vulnerabilities.}
+        \item {Conducted \textbf{updates for server operating systems}, ensuring system security and stability. And Migrated from \textbf{Redis MicroService to DragonFly} a more efficient solution that improved data retrieval speed and reduced memory usage.}
+        \item {\textbf{Technologies Used :} JavaScript, Node.js, Express.js, RESTful API Development, Socket.io, Redis, DragonFly, Npm, AWS EC2}
+      \resumeItemListEnd
+    \vspace{-1mm}
+    \resumeProject
+      {Database Archiving and Structuring} %Project Name
+      {\href{https://www.linkedin.com/in/vikramsahani256/}{\textbf{Vikram Sahani, JungleWorks}}} %Project Name, Location Name
+      {Oct 2022 - Dec 2022} %Event Dates
+      {} %Website
+      \resumeItemListStart
+        \item {Was part of a team of 2 people where we have archived and restructured company databases, resulting in substantial cost savings and improved data management.}
+        \item {Developed an automated shell and python scripts, and used Percona tools, and MySQL procedures to shift and archive data.}
+        \item {Designed and implemented monthly automated scripts to archive historical data on \textbf{4 MYSQL servers and 3 MongoDb servers}, Achieved a monthly data reduction of approximately \textbf{40GB} on MYSQL and approximately \textbf{60GB} on MongoDb}
+        \item {Successfully archived \textbf{4 MySQL database servers}, 1 master and 3 slaves each initially containing \textbf{3TB} of data, reducing them to \textbf{750GB} each, reducing the storage footprint by \textbf{75\%}}
+        \item {Archived \textbf{3 MongoDB database servers} 1 primary and 2 secondary each initially had \textbf{8TB} each, reducing them to \textbf{1.2TB} each.reducing the storage footprint by \textbf{85\%}}
+        \item {All these changes enabled us to increase CPU utilization and degradation of servers, resulting in \textbf{\$5600} in server cost savings.}
+        \item {\textbf{Technologies Used :} Shell Scripting, Python Scripting, Percona Tools, MySQL, MongoDB, Amazon Web Services (AWS)}
+      \resumeItemListEnd
+    \vspace{-1mm}
+    \resumeProject
+      {Package Delivery System} %Project Name
+      {\textbf{Self}} %Project Name, Location Name
+      {July 2022 - July 2022} %Event Dates
+      {\href{https://github.com/Dheerajpenta/package-delivery-system}{\textbf{Github}}} %Website
+      \resumeItemListStart
+        \item {Designed and developed a comprehensive backend system for a parcel delivery service using MongoDB as the primary database.}
+        \item {Developed RESTful API's to enable order tracking, parcel status updates, and customer feedback mechanisms to enhance client's service quality.}
+        \item {Implemented Authentication RESTful APIs to secure user access. Introduced two distinct user roles, Admin and Manager, with role-based access control for all APIs.}
+        \item {Integrated a payment gateway to facilitate seamless payment processing within the platform.}
+        \item {\textbf{Technologies Used :} JavaScript, MongoDB, Node.js, Express.js, RESTful API Development, Authentication Systems, RazorPay Payment Gateway Integration}
+      \resumeItemListEnd
+    \vspace{-1mm}
+    \resumeProject
+      {LinedIn Scraper} %Project Name
+      {\textbf{Self}} %Project Name, Location Name
+      {Apr 2021 - May 2021} %Event Dates
+      {\href{https://github.com/Dheerajpenta/LinkedIn_Scrapper}{\textbf{Github}}} %Website
+      \resumeItemListStart
+        \item {Developed a Python script utilising Selenium for web scraping of employee data from LinkedIn profiles of a specified company.}
+        \item {The script allows users to input their LinkedIn username and password along with the company's LinkedIn profile URL for scraping. And specify the number of employees to scrape from the company's profile.}
+        \item {Implemented a mechanism to handle CAPTCHA challenges, pausing the script for 30 seconds for manual verification before resuming.}
+        \item {\textbf{Technologies Used :} Python, Selenium, BeautifulSoup, pandas packages.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-9mm}
+
+%-----------Technical Skills-----------------
+\section{\textbf{Technical Skills}}
+ \resumeHeadingSkillStart
+   \resumeSubItem{Programming Languages} % Category
+    { C, C++, Python, JavaScript, SQL, MATLAB.} % Skills
+   \resumeSubItem{Web Development Technologies} % Category
+    { Node.js, HTML, CSS, Express.js, Angular.js, Django.} % Skills
+   \resumeSubItem{Version Control Tools} % Category
+    { GIT, GITHUB, GITLAB.} % Skills
+   \resumeSubItem{Databases} % Category
+    {MySQL, MongoDb, Redis, DragonFly, DynamoDb (AWS), PostgreSQL.} % Skills
+   \resumeSubItem{Scripting and Automation} % Category
+    { Shell and Bash Scripting, Python Scripting.} % Skills
+   \resumeSubItem{Cloud Computing (AWS)} % Category
+    { EC2 (Elastic Compute Cloud), S3 (Simple Storage Service),  IAM (Identity and Access Management), ECS (Elastic Container Service).} % Skills
+   \resumeSubItem{Developer Tools} % Category
+    { Docker, VisualStudio Code, POSTMAN, PyCharm, JIRA.} % Skills
+   \resumeSubItem{Machine Learning and AI} % Category
+    { Google TensorFlow.} % Skills
+   \resumeSubItem{Operating Systems} % Category
+    { Linux, Debian, CentOS, Fedora, Ubuntu, MacOS, Windows.} % Skills
+   \resumeSubItem{Certifications} % Category
+    { 
+    \href{https://drive.google.com/file/d/1CCLdKiJOFdasjyimUzfc1KVBFrdfcCPQ/view?usp=sharing}{PYTHON}, 
+    \href{https://drive.google.com/drive/folders/1H-e4eIoCl9opliXZX4RbJL9vsg2VfFj9}{JAVASCRIPT}, 
+    \href{https://drive.google.com/drive/folders/1H-e4eIoCl9opliXZX4RbJL9vsg2VfFj9}{HTML5},
+    \href{https://drive.google.com/drive/folders/1H-e4eIoCl9opliXZX4RbJL9vsg2VfFj9}{CSS3}, 
+    \href{https://courses.cognitiveclass.ai/certificates/2a41ba476b6d440e9a28f0993bee4fef}{SQL and Relational Database},
+    \href{https://courses.cognitiveclass.ai/certificates/98f9b3e2fe054f0b9595f11d67aebba4}{Machine Learning with PYTHON}, 
+    \href{https://courses.cognitiveclass.ai/certificates/c130414bfd58452687f6f5f27f23fd25}{Data Analytics with PYTHON}.
+    }% Skills
+ \resumeHeadingSkillEnd
+\vspace{-3mm}
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.1mm}
+\resumeSubHeadingListStart
+  \resumePOR
+    {Hackathon} % Award
+    { Secured \textbf{4th} Position in the Hackathon organised by Jungleworks in \textbf{June,2022} } % Event
+    {} %Event Year
+  \vspace{-0.1mm}
+  \resumePOR
+    {TS-EAMCET} % Award
+    { Secured a rank of \textbf{1722} out of approximately 250 thousand students } % Event
+    {} %Event Year
+  \resumePOR
+    {JEE-MAIN} % Award
+    { Secured a rank of \textbf{6863} out of \textbf{1.2 million} students} % Event
+    {} %Event Year
+  \vspace{-0.1mm}
+  \resumePOR
+    {JEE-ADVANCED} % Award
+    { Secured a rank of \textbf{16071} out of \textbf{250 thousand} students } % Event
+    {} %Event Year
+  \vspace{-0.1mm}
+  \resumePOR
+    {TAEKWANDO} % Award
+    { Reached up to a rank of \textbf{Blue-1} Belt, also participated in various acrobatic events where I demonstrated my skills.} % Event
+    {2016} %Event Year
+  \vspace{-1.2mm}
+\resumeSubHeadingListEnd
+
+% \vspace{-2mm}
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+%-------------------------------------------
+\end{document}
